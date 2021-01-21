@@ -38,6 +38,11 @@ public class HelloWorld {
         System.out.println(y);
         System.out.println(w);
 
-
+        int s = 10;
+        int d = 2;
+        s = s / d;
+        d = d - s;
+int q = 10 / 2;
+int z = 2-10;
     }
 }
