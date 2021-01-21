@@ -43,10 +43,10 @@ public class HelloWorld {
         s = s / d;
         d = d - s;
 int q = 10 / 2;
-int z = 2000000000 - 10;
+int z = 2000000 - 10;
         System.out.println("start: "+ s);
         System.out.println(d);
         System.out.println(q);
-        System.out.println(z);
+        System.out.println(++z);
     }
 }
