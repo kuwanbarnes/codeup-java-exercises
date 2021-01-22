@@ -80,7 +80,7 @@ public class ConsoleExercises {
         ;
         input1 =scanner5.next();
         input2 =scanner5.next();
-        if (input1.length() == 2) {
+        if (input1.length() >= 2 || input2.length() >= 2 ) {
             // convert strings to numbers
             float a = Float.parseFloat(input1);
             float b = Float.parseFloat(input2);
