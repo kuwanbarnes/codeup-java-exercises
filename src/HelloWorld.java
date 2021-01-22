@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
@@ -26,27 +27,26 @@ public class HelloWorld {
 
 
         int a = 4;
-        a = a + 5;
-        int c =4+5;
+       a+=5;
         System.out.println(a);
-        System.out.println(c);
+
 
         int b = 3;
-        int y = 4;
-        y = y * b;
-        int w=3*4;
-        System.out.println(y);
-        System.out.println(w);
+       b*=4;
+        System.out.println(b);
+
 
         int s = 10;
         int d = 2;
-        s = s / d;
-        d = d - s;
-int q = 10 / 2;
-int z = 2000000 - 10;
+        s /= d;
+        d -= s;
+
         System.out.println("start: "+ s);
         System.out.println(d);
-        System.out.println(q);
-        System.out.println(++z);
+
+
+        String name = "kuwan";
+        String greeting = "Salutations";
+        System.out.printf("%s, %s. Nice to see you.\n",greeting, name);
     }
 }
