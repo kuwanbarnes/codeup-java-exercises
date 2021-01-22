@@ -12,17 +12,18 @@ public class ConsoleExercises {
 
     public static void main(String[] args) {
         double pi = 3.14159;
-        customFormat("#.##", pi);
+
         System.out.format("The value of pi is approximately: %.2f%n", pi);
 
 // TODO: Prompt a user to enter a integer and store that value in an int variable using the nextInt method.
 //
-//        Scanner scanner = new Scanner(System.in);
-//        int userInput;
-//
-//
-//        System.out.print("Enter something: ");
-////        String userInput = scanner.next();
+        Scanner scanner = new Scanner(System.in);
+
+
+int interger;
+        System.out.println("Enter something: ");
+        interger = scanner.nextInt();
+        System.out.printf("Your number is %d",interger);
 //// TODO: What happens if you input something that is not an integer?
 //        // only works with numbers
 //         userInput= scanner.nextInt();
