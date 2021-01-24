@@ -59,8 +59,8 @@ public class ControlFlowExercises {
             int integer = sc.nextInt();
 
             // Create a header
-            String header = "Number  " + "Squared " + "Cubed   " + "\n"
-                    + "------  " + "------ " + "------  ";
+            String header = "Number | " + "Squared | " + "Cubed   " + "\n"
+                    + "------  " + " ------- " + "  -----  ";
             System.out.println(header);
 
             int square = 0;
@@ -72,7 +72,7 @@ public class ControlFlowExercises {
                 square = w * w;
                 cube = w * w * w;
 
-                row = w + "     | "+ square + " | " + cube;
+                row = w + "      | "+ square + "       | " + cube;
                 System.out.println(row);
             }
 
