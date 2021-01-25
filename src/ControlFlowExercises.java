@@ -1,5 +1,3 @@
-package syntax;
-
 import java.util.Scanner;
 
 public class ControlFlowExercises {
@@ -72,7 +70,7 @@ public class ControlFlowExercises {
                 square = w * w;
                 cube = w * w * w;
 
-                row = w + "      | "+ square + "       | " + cube;
+                row = w + "      | " + square + "       | " + cube;
                 System.out.println(row);
             }
 
@@ -86,6 +84,32 @@ public class ControlFlowExercises {
 
 //TODO:Alter your loop to count backwards by 5's from 100 to -10.
 //TODO:Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
+        //TODO:Convert given number grades into letter grades.
+        //
+        //Prompt the user for a numerical grade from 0 to 100.
+        //Display the corresponding letter grade.
+        //Prompt the user to continue.
+        //Assume that the user will enter valid integers for the grades.
+        //The application should only continue if the user agrees to.
+        System.out.print("Enter a grade from 0-100: ");
+        int input = sc.nextInt();
+        String choices ="y";
+
+        if (input >= 88) {
+            System.out.println("A");
+        } else if (input >= 80 && input <= 87) {
+            System.out.println("B");
+        } else if (input >= 67 && input <= 79) {
+            System.out.println("C");
+        } else if (input >= 60 && input <= 67) {
+            System.out.println("D");
+        } else if (input >= 0 && input <= 59) {
+            System.out.println("F");
+        }
+        System.out.print("Continue? (y/n): ");
+        choice = sc.next();
+        System.out.println();
     }
+
 }
 
