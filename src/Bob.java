@@ -4,7 +4,7 @@ public class Bob {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         System.out.println("what would you like to say to Bob?");
-        String response= sc.nextLine();
+        String response= sc.nextLine().trim();
         if (response.endsWith("!")){
             System.out.println("Woah, chill out!");
         }else if (response.endsWith("?")){

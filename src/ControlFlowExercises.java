@@ -3,28 +3,32 @@ import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args) {
         //TODO:Create an integer variable i with a value of 5.
-        int i = 5;
-        //TODO:Create a while loop that runs so long as i is less than or equal to 15
-        while (i <= 15) {
-            System.out.println("current value of i : " + i);
-            i++;
-        }
+//        int i = 5;
+//        //TODO:Create a while loop that runs so long as i is less than or equal to 15
+//        while (i <= 15) {
+//            System.out.printf("%d " , i);
+//            i++;
+//        }
         //TODO:Each loop iteration, output the current value of i, then increment i by one.
 
 //TODO:Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
 
 //        int number = 100;
 //        do {
-//            System.out.println((number -= 5) + " ");} while (number>=-9);
+//            System.out.println(number);
+//        m-=5;
+//            } while (number>=-10);
 //
-//        int number1 = 0;
-//        do {System.out.println((number1 += 2));} while (number1<=99);
-
-        double number2 = 2;
-        do {
-            System.out.printf("%.0f%n", number2);
-            number2 = Math.pow(number2, 2);
-        } while (number2 < 1000000);
+//        long   number1 = 2;
+//        do {System.out.println((number1);
+//        n+=n;
+//        } while (number1<=1000000);
+//        System.out.println();
+//        double number2 = 2;
+//        do {
+//            System.out.printf("%.0f%n", number2);
+//            number2 = Math.pow(number2, 2);
+//        } while (number2 < 1000000);
 
         int a = 0;
         while (a <= 100) {
@@ -40,6 +44,22 @@ public class ControlFlowExercises {
             ;
             a++;
             ;
+        }
+//int i =5;
+//        while (i <= 15) {
+//            System.out.printf("%d " , i);
+//            i++;
+//        }
+        for(int i=5;i<=15;i++){
+            System.out.printf("%d ",i);
+        }
+        System.out.println();
+//        do {
+//            System.out.printf("%.0f%n", number2);
+//            number2 = Math.pow(number2, 2);
+//        } while (number2 < 1000000);
+        for (long n=2;n < 1000000;n=n*n){
+            System.out.println(n);
         }
 //TODO: Display a table of powers.
 //
@@ -82,6 +102,11 @@ public class ControlFlowExercises {
         }
         while (!choice.equalsIgnoreCase("n"));
 
+int i=5;
+        while (i <= 15) {
+            System.out.printf(" %d " , i);
+            i++;
+        }
 //TODO:Alter your loop to count backwards by 5's from 100 to -10.
 //TODO:Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
         //TODO:Convert given number grades into letter grades.
@@ -107,8 +132,9 @@ public class ControlFlowExercises {
             System.out.println("F");
         }
         System.out.print("Continue? (y/n): ");
-        choice = sc.next();
-        System.out.println();
+        String userResponse = sc.next();
+         boolean usercontinue =(!userResponse.equalsIgnoreCase("n"));
+        System.out.println(usercontinue);
     }
 
 }
