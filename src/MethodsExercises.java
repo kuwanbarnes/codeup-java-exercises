@@ -1,16 +1,32 @@
 public class MethodsExercises {
-    public static int add(int base, int exponent) {
-        if (exponent == 0) {
-            return 1;
-        } else if (exponent == 1) {
-            return base;
-        } else if (exponent == 2) {
-            return base * base;
+    public static int addNumber(int num1, int num2) {
+
+
+        return num1 +num2;
+
         }
-        return base * add(base, exponent - 1);
-    }
+    public static int subtractNumber(int num1, int num2) {
 
+
+        return num1 - num2;
+
+    }
+    public static int multiplyNumber(int num1, int num2) {
+
+
+        return num1 * num2;
+
+    }
+    public static int divideNumber(int num1, int num2) {
+
+
+        return num1 / num2;
+
+    }
     public static void main(String[] args) {
-
+        System.out.println(addNumber(6,2));
+        System.out.println(subtractNumber(6,2));
+        System.out.println(multiplyNumber(6,2));
+        System.out.println(divideNumber(6,2));
     }
-}
+    }

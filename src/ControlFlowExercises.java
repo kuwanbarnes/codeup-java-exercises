@@ -91,7 +91,8 @@ public class ControlFlowExercises {
                 cube = w * w * w;
 
                 row = w + "      | " + square + "       | " + cube;
-                System.out.println(row);
+//                System.out.println(row);
+                System.out.printf("%-6d | %-7d | %d%n", w, square,cube);
             }
 
             // See if the user wants to continue
