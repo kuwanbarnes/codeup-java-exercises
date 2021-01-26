@@ -1,39 +1,96 @@
+import java.util.Scanner;
+
 public class MethodsExercises {
     public static int addNumber(int num1, int num2) {
 
 
-        return num1 +num2;
+        return num1 + num2;
 
-        }
+    }
+
     public static int subtractNumber(int num1, int num2) {
 
 
         return num1 - num2;
 
     }
+
     public static int multiplyNumber(int num1, int num2) {
 
 
         return num1 * num2;
 
     }
+
     public static int divideNumber(int num1, int num2) {
 
 
         return num1 / num2;
 
     }
+
     public static int modulusNumber(int num1, int num2) {
 
 
         return num1 % num2;
 
     }
+    public static int Factorial(int input){
+        int i, value = 1;
+        for(i = 1; i<=input;i++){
+            value = value * i;
+        }
+        return value;
+    }
+
     public static void main(String[] args) {
-        System.out.println(addNumber(6,2));
-        System.out.println(subtractNumber(6,2));
-        System.out.println(multiplyNumber(6,2));
-        System.out.println(divideNumber(6,2));
-        System.out.println(modulusNumber(6,4));
+        System.out.print("Enter a number between 1 and 10: ");
+        System.out.println();
+        int userInput = getInteger(0, 10);
+        System.out.println(userInput);
+
+
+        System.out.println("The factorial of " + userInput + " is: " + Factorial(userInput));
+
     }
+
+
+
+
+    public static int getInteger(int min, int max) {
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter a number between "+ min + "and" + max + ": ");// first prompt user to enter a number between min and max
+        int response = sc.nextInt();// then read the number
+        if (response >= min && response <= max) {// if the number is in range, return it
+            System.out.println("num in range ");
+            return response;
+        }else{
+            return getInteger(min, max);// else, return getInteger(min, max)
+
+
+        }
+
+
     }
+
+
+//    public static long factorialUsingForLoop(int n) {
+//        Scanner sc1 = new Scanner(System.in);
+//        String choice = "y";
+//        do{
+//        System.out.print("Enter a number between 1 and 10: ");
+//        long fact = sc1.nextInt();
+//        System.out.println(fact);
+//        System.out.print("Continue? (y/n): ");
+//        choice = sc1.next();
+//        System.out.println();
+//        for (int i = 2; i <= n; i++) {
+//            fact = fact * i;
+//        }
+//        return fact;
+//    }
+
+
+            }
+
+
