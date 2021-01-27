@@ -1,3 +1,4 @@
+import javax.xml.transform.sax.SAXSource;
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -44,14 +45,15 @@ public class MethodsExercises {
     }
 
     public static void main(String[] args) {
-        System.out.print("Enter a number between 1 and 10: ");
+        Scanner scan = new Scanner(System.in);
+//        System.out.print("Enter a number between 1 and 10: ");
         System.out.println();
         int userInput = getInteger(0, 10);
         System.out.println(userInput);
 
 
         System.out.println("The factorial of " + userInput + " is: " + Factorial(userInput));
-
+        diceRoll(scan);
     }
 
 
@@ -71,7 +73,29 @@ public class MethodsExercises {
         }
 
 
+
     }
+    public static void diceRoll(Scanner scan){
+
+        while( true ){
+
+
+            System.out.println("Give me the number of sides of the dice");
+            short n = Short.parseShort(scan.nextLine());
+            int range = n - 1 + 1;
+            System.out.println("Your dice roll 1 = " + ((int)(Math.random() * range) + 1) );
+            System.out.println("roll dice 2 = " + ((int)(Math.random() * range) + 1) );
+
+            System.out.println("Do you wish to continue? y/n");
+            if(scan.nextLine().toLowerCase().equals("n")){
+                break;
+            }
+        }
+
+    }
+
+}
+
 
 
 //    public static long factorialUsingForLoop(int n) {
@@ -91,6 +115,6 @@ public class MethodsExercises {
 //    }
 
 
-            }
+
 
 
