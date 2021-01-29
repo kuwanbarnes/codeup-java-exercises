@@ -45,6 +45,11 @@ public class MethodsExercises {
     }
 
     public static void main(String[] args) {
+        System.out.println(addNumber(2,2));
+        System.out.println(subtractNumber(2,2));
+        System.out.println(multiplyNumber(2,2));
+        System.out.println(divideNumber(77,7));
+        System.out.println(modulusNumber(50,9 ));
         Scanner scan = new Scanner(System.in);
 //        System.out.print("Enter a number between 1 and 10: ");
         System.out.println();
@@ -52,7 +57,7 @@ public class MethodsExercises {
         System.out.println(userInput);
 
 
-        System.out.println("The factorial of " + userInput + " is: " + Factorial(userInput));
+        System.out.println("The factorial of " +"!"+ userInput + " is: " + Factorial(userInput));
         diceRoll(scan);
     }
 
@@ -84,7 +89,7 @@ public class MethodsExercises {
             short n = Short.parseShort(scan.nextLine());
             int range = n - 1 + 1;
             System.out.println("Your dice roll 1 = " + ((int)(Math.random() * range) + 1) );
-            System.out.println("roll dice 2 = " + ((int)(Math.random() * range) + 1) );
+            System.out.println("Your dice roll 2 = " + ((int)(Math.random() * range) + 1) );
 
             System.out.println("Do you wish to continue? y/n");
             if(scan.nextLine().toLowerCase().equals("n")){
