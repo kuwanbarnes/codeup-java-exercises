@@ -11,7 +11,7 @@ public class InputTest {
 Scanner sc = new Scanner(System.in);
         System.out.println("enter number");
 
-        Input input = new Input(System.in);
+        Input input = new Input();
         System.out.println("getdouble :"+input.getDouble(1,10));
         System.out.println(input.getInt(1,10));
         System.out.println();

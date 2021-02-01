@@ -9,10 +9,11 @@ public class Circle {      //create a class named Circle.
     }
     public double getArea(){
 
-       return  pi * (radius * radius);
+       return  pi * (this.radius * radius);
 
     }
     public double getCircumference(){
         return   2 * pi * radius;
     }
+
 }

@@ -10,16 +10,16 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
 
-    String getString() {
+   public String getString() {
         return getString("please enter a string : ");
 
     }
-    String getString (String prompt){
+  public String getString (String prompt){
         System.out.println(prompt);
         return this.scanner.nextLine();
     }
 
-    boolean yesNo() {
+    public boolean yesNo() {
         System.out.printf("please enter \"yes\" or \"no\": %n");
         String answer = this.scanner.nextLine();
         return (answer.toLowerCase().equals("y") ||
@@ -27,12 +27,12 @@ public class Input {
 
     }
 
-    int getInt() {
+    public int getInt() {
         System.out.println("Please enter interger: %n");
         return this.scanner.nextInt();
     }
 
-    int getInt(int min, int max) {
+   public int getInt(int min, int max) {
         while (true) {
             System.out.printf("please enter interger between %d and %d",min,max);
             ;// first prompt user to enter a number between min and max
@@ -50,7 +50,7 @@ public class Input {
     }
 
 
-    double getDouble(double min, double max) {
+   public double getDouble(double min, double max) {
         while (true) {
             double response1 = this.scanner.nextDouble();// then read the number
             if (response1 >= min && response1 <= max) {// if the number is in range, return it
