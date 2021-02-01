@@ -1,5 +1,6 @@
 package util;
 
+import java.io.InputStream;
 import java.util.Scanner;
 
 public class Input {
@@ -7,50 +8,77 @@ public class Input {
 
     public Input() {
         this.scanner = new Scanner(System.in);
+    }
+
+    String getString() {
+        return getString("please enter a string : ");
+
+    }
+    String getString (String prompt){
+        System.out.println(prompt);
+        return this.scanner.nextLine();
+    }
+
+    boolean yesNo() {
+        System.out.printf("please enter \"yes\" or \"no\": %n");
+        String answer = this.scanner.nextLine();
+        return (answer.toLowerCase().equals("y") ||
+                answer.toLowerCase().equals("yes"));
 
     }
 
-    public String getString() {
-        return "hello";
+    int getInt() {
+        System.out.println("Please enter interger: %n");
+        return this.scanner.nextInt();
     }
 
-    public boolean yesNo(char y) {
-        return true;
+    int getInt(int min, int max) {
+        while (true) {
+            System.out.printf("please enter interger between %d and %d",min,max);
+            ;// first prompt user to enter a number between min and max
+            int response = scanner.nextInt();// then read the number
+            if (response >= min && response <= max) {// if the number is in range, return it
+                return response;
+
+            }
+        }
     }
 
-    public static int getInt(int min, int max) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number between " + min + "and" + max + ": ");// first prompt user to enter a number between min and max
-        int response = sc.nextInt();// then read the number
-        if (response >= min && response <= max) {// if the number is in range, return it
-            System.out.println("num in range ");
-            return response;
-        } else {
-            System.out.println("num not in range ");
-            return getInt(min, max);// else, return getInteger(min, max)
+    public double getDouble() {
+        System.out.printf("please enter a double: %n");
+        return this.scanner.nextDouble();
+    }
+
+
+    double getDouble(double min, double max) {
+        while (true) {
+            double response1 = this.scanner.nextDouble();// then read the number
+            if (response1 >= min && response1 <= max) {// if the number is in range, return it
+
+                return response1;
+            }
 
 
         }
-    }
-    public static int getDouble(double min, double max) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number between " + min + "and" + max + ": ");// first prompt user to enter a number between min and max
-        int response = sc.nextInt();// then read the number
-        if (response >= min && response <= max) {// if the number is in range, return it
-            System.out.println("num in range ");
-            return response;
-        } else {
-            System.out.println("num not in range ");
-            return getDouble(min, max);// else, return getInteger(min, max)
-
-
-        }
-    }
-    public  double getDouble(){
-        System.out.println("ENTER DOUBLE : ");
-return this.scanner.nextDouble();
     }
 }
+
+//    public static void main(String[] args) {
+//        Input in =new Input();
+//    }
+
+//    public Input() {
+//        this.scanner = new Scanner(System.in);
+//        String input1 = scanner.nextLine();
+//input1= getString ();
+//        System.out.println(input1);
+//        String answer = scanner.next().toLowerCase();
+//
+//        }
+
+
+
+
 
 
 //        boolean yesNo()
