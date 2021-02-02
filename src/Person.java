@@ -1,23 +1,28 @@
 public class Person {
-    private  String name;
+    private String name;
 
-    Person(String name){
+    Person(String name) {
         this.name = name;
     }
-    public String getName(){
+
+    public String getName() {
         return this.name;
 //TODO: return the person's name
     }
 
-    public void setName(String newName){
+    public void setName(String newName) {
 //TODO: change the name property to the passed value
         this.name = newName;
     }
-    public void sayHello(){
+
+    public void sayHello() {
 //TODO: print a message to the console using the person's name
-        System.out.println( "hello from " + this.name);
+        System.out.println("hello from " + this.name);
     }
 
+    public String toString() {
+        return name;
+    }
 
 
     public static void main(String[] args) {
