@@ -19,12 +19,10 @@ public class Rectangle {
 
 
 
-  public   int getArea(){
-        int area = this.length * this.width;
-       return area;
-   }
-  public int getPerimeter(){
-       int perimeter = 2*this.length + 2* this.width;
-       return perimeter;
+  public  double getArea(){
+       return this.length * this.width;
+  }
+  public double getPerimeter(){
+      return 2*this.length + 2* this.width;
    }
 }

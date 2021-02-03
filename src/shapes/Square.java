@@ -8,9 +8,13 @@ public class Square extends Rectangle {
 
         }
     @Override
-    public int getArea() {
-        int side = 5;
-        int area = 4 * side;
-    return area;
+    public double getArea() {
+        System.out.println("Square.getArea");
+       return Math.pow(this.length,2);
+    }
+    @Override
+    public double getPerimeter() {
+        System.out.println("Square.getPerimeter");
+        return 4*this.width;
     }
 }
