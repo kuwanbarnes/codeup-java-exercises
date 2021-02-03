@@ -7,12 +7,12 @@ public class ServerNameGenerator {
             "woman","life","child"};
 
     public static void main(String[] args) {
-
+//String noun =get
         Random randomizer = new Random();
         int randInt = randomizer.nextInt(11);
         System.out.println(" random adjective is : " + adjectives[randInt]);
         System.out.println( " random noun is : " + nouns[randInt]);
         System.out.println("Here is your server name:\n" +adjectives[randInt]+"-"+nouns[randInt]);
     }
-
+//
 }

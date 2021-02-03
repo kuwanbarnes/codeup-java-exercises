@@ -31,6 +31,10 @@ public class Input {
         System.out.println("Please enter interger: %n");
         return this.scanner.nextInt();
     }
+    public int getInt(String prompt) {
+        System.out.print(prompt);
+        return this.scanner.nextInt();
+    }
 
    public int getInt(int min, int max) {
         while (true) {
