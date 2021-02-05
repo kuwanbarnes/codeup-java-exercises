@@ -65,7 +65,7 @@ public  class GradesApplication {
             }
         }
             while (true) ;
-
+        System.out.println("Goodbye, and have a wonderful day!");
 
     }
 }
