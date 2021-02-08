@@ -1,6 +1,7 @@
 package util;
 
 import java.io.InputStream;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Input {
@@ -8,15 +9,18 @@ public class Input {
 
     public Input() {
         this.scanner = new Scanner(System.in);
+
     }
 
+
    public String getString() {
-        return getString("please enter a string : ");
+        return this.getString("");
 
     }
   public String getString (String prompt){
         System.out.println(prompt);
         return this.scanner.nextLine();
+
     }
 
     public boolean yesNo() {
@@ -31,10 +35,19 @@ public class Input {
         System.out.println("Please enter interger: %n");
         return this.scanner.nextInt();
     }
-    public int getInt(String prompt) {
-        System.out.print(prompt);
-        return this.scanner.nextInt();
+    public int getInt (String prompt)  {
+        int number;
+        try{
+           number= Integer.valueOf(getString());
+            return number;
+        }catch (NumberFormatException nfe){
+            System.err.println("Wrong input,try again");;
+            return getInt(prompt);
+        }
+
     }
+
+
 
    public int getInt(int min, int max) {
         while (true) {
@@ -48,13 +61,26 @@ public class Input {
         }
     }
 
-    public double getDouble() {
-        System.out.printf("please enter a double: %n");
-        return this.scanner.nextDouble();
+    public double getDouble (String prompt) {
+        double number;
+
+        try{ number=Double.valueOf(getString(prompt));
+            System.out.printf("please enter a double: %n");
+            return number;
+        }catch (NumberFormatException e){
+            System.err.println("Wrong input,try again");;
+            return getDouble(prompt);
+
+        }
+
     }
 
 
-   public double getDouble(double min, double max) {
+
+
+
+
+    public double getDouble (double min, double max) {
         while (true) {
             double response1 = this.scanner.nextDouble();// then read the number
             if (response1 >= min && response1 <= max) {// if the number is in range, return it

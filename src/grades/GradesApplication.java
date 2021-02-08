@@ -11,8 +11,8 @@ public  class GradesApplication {
         newStudent.addGrade(80);
         newStudent.addGrade(90);
         newStudent.addGrade(60);
-        newStudent.addGrade(10);
-        System.out.println(newStudent.getAverage());
+        newStudent.addGrade(100);
+//        System.out.println(newStudent.getAverage());
 //        System.out.println(newStudent.getName());
 //        System.out.println(newStudent.grades);
 
@@ -24,15 +24,15 @@ public  class GradesApplication {
         newStudent1.addGrade(70);
 //        System.out.println(newStudent.getAverage());
 //        System.out.println(newStudent.getName());
-        System.out.println(newStudent1);
+//        System.out.println(newStudent1);
 
         Student newStudent2 = new Student("josh");
         newStudent2.addGrade(80);
         newStudent2.addGrade(90);
         newStudent2.addGrade(60);
         newStudent2.addGrade(90);
-        System.out.println(newStudent.getAverage());
-        System.out.println(newStudent.getName());
+//        System.out.println(newStudent.getAverage());
+  //      System.out.println(newStudent.getName());
 //
 
         HashMap<String, Student> usernames = new HashMap<>();
@@ -41,9 +41,9 @@ public  class GradesApplication {
         usernames.put("james@gmail.com", newStudent1);
         usernames.put("john@gmail.com", newStudent2);
 
-        System.out.println(usernames.keySet());
+//        System.out.println(usernames.keySet());
 //        System.out.println(usernames.size()("kuwan@gmail.com"));
-        System.out.println(newStudent.getGrades());
+ //       System.out.println(newStudent.getGrades());
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome");

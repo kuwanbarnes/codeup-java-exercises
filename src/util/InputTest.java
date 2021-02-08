@@ -9,9 +9,12 @@ public class InputTest {
 
     public static void main(String[] args) {
 Scanner sc = new Scanner(System.in);
-        System.out.println("enter number");
+//        System.out.println("enter number");
 
         Input input = new Input();
+            System.out.println(input.getInt("Give me a number"));
+//            System.out.println("enter a double");
+            System.out.println(input.getDouble("give me a number"));
         System.out.println("getdouble :"+input.getDouble(1,10));
         System.out.println(input.getInt(1,10));
         System.out.println();
