@@ -1,3 +1,6 @@
+
+ADDED WITH Files.write(filePath, languages,StandardOpenOption.APPEND);
+ADDED WITH Files.write(filePath, languages,StandardOpenOption.APPEND);
 HTML
 Java
 JavaScript
@@ -6,3 +9,4 @@ ADDEDWITH Files.write(filePath, languages);
 ADDED
 ADDED WITH Files.write(filePath, languages,StandardOpenOption.APPEND);
 System.out.println("here is a language i like :" +line);
+
