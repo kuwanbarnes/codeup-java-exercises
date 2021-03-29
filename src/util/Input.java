@@ -63,6 +63,7 @@ public class Input {
         }
     }
 
+
     public double getDouble(String prompt) {
         double number;
 
@@ -75,6 +76,17 @@ public class Input {
             ;
             return getDouble(prompt);
 
+    public double getDouble () {
+        double number;
+
+        try{ number=Double.valueOf(getString());
+            System.out.printf("please enter a double: %n");
+            return number;
+        }catch (NumberFormatException e){
+            System.err.println("array out of bounds");;
+            return getDouble();
+
+
         }
 
     }
@@ -85,11 +97,10 @@ public class Input {
             double response1 = this.scanner.nextDouble();// then read the number
             if (response1 >= min && response1 <= max) {// if the number is in range, return it
 
-                return response1;
-            }
 
 
-        }
+
+
     }
 
     public double getDouble() {
@@ -105,6 +116,7 @@ public class Input {
         }
     }
 }
+
 
 //    public static void main(String[] args) {
 //        Input in =new Input();
